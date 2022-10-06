@@ -1,0 +1,13 @@
+{
+  "files": {
+    "KinderEngine.Core/KinderEngine.Core.csproj": {
+      "version": "1.0.0"
+    },
+    "KinderEngine.Maui/KinderEngine.Maui.csproj": {
+      "version": "1.0.0"
+    },
+    "KinderEngine.Wpf/KinderEngine.Wpf.csproj": {
+      "version": "1.0.0"
+    },
+  }
+}
