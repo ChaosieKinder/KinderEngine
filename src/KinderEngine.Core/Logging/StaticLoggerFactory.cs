@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Builder;
 using Microsoft.Extensions.DependencyInjection;
+using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 using System;
 using System.Collections.Concurrent;
@@ -29,7 +30,7 @@ namespace KinderEngine.Core.Logging
                 .GetOrAdd(typeof(T), _loggerFactory.CreateLogger<T>());
         }
 
-        public static WebApplication UseStaticLogger(this WebApplication webApp)
+        public static IHost UseStaticLogger(this IHost webApp)
         {
             var fac = webApp.Services.GetRequiredService<ILoggerFactory>();
             StaticLoggerFactory.Initialize(fac);
