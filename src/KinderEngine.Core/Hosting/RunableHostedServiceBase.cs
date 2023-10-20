@@ -10,7 +10,7 @@ namespace KinderEngine.Core.Hosting
     /// <summary>
     ///     Should maintain a queue of tokendb pages to scan
     /// </summary>
-    public abstract class RunableHostedServiceBase<TResult> : IRunableHostedService<TResult>
+    public abstract class RunableHostedServiceBase<TResult> : IRunableHostedService
     {
         public bool IsRunning { get; protected set; }
         public virtual string ServiceName { get => $"Unnamed_{nameof(RunableHostedServiceBase<TResult>)}"; }

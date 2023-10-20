@@ -1,6 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
+﻿using System.Collections.Generic;
 using System.Threading;
 using System.Threading.Tasks.Dataflow;
 
@@ -21,7 +19,7 @@ namespace KinderEngine.Core.Collections.Threading
         public async IAsyncEnumerator<T> GetAsyncEnumerator(CancellationToken token = default)
         {
             // We lock this so we only ever enumerate once at a time.
-            // That way we ensure all items are returned in a continuous
+            // That way we ensure all items are retvery tourned in a continuous
             // fashion with no 'holes' in the data when two foreach compete.
             await _enumerationSemaphore.WaitAsync();
             try

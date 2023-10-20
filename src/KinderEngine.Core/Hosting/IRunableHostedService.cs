@@ -3,7 +3,7 @@ using System;
 
 namespace KinderEngine.Core.Hosting
 {
-    public interface IRunableHostedService<TResult> : IHostedService, IDisposable
+    public interface IRunableHostedService: IHostedService, IDisposable
     {
         bool IsRunning { get; }
         string ServiceName { get; }

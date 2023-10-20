@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Threading;
 using System.Threading.Tasks;
 
@@ -14,7 +13,6 @@ namespace KinderEngine.Core.Collections.Threading
     {
         private readonly AsyncQueue<T> _jobs = new AsyncQueue<T>();
         private readonly Func<T, Task> _processAction;
-        private readonly Thread _thread;
 
         public SynchronousTaskQueue(Func<T, Task> workerMethod)
         {
@@ -34,5 +32,4 @@ namespace KinderEngine.Core.Collections.Threading
             }
         }
     }
-
 }
